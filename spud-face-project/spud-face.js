@@ -18,7 +18,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
   })
 
   // ** Phase 2: Add focus and blur events to form inputs **
+  inputs.addEventListener('focus', (event) => {
+    event.target.style.background = 'lightgreen';
+  }, true);
 
+  inputs.addEventListener('blur', (event) => {
+    event.target.style.background = 'unset';
+  }, true);
 
   // ** Phase 3: Check that license numbers match **
 
