@@ -27,7 +27,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }, true);
 
   // ** Phase 3: Check that license numbers match **
-
+  const license= document.getElementById('license-num');
+  const licenseConfirm= document.getElementById('license-num-confirm');
+  inputs.addEventListener("input", (event) => {
+    if (license.value!==licenseConfirm.value) {
+      license.style.background= "lightcoral";
+      licenseConfirm.style.background= "lightcoral";
+      // console.log(event.target);
+    }else {
+      license.style.background= "unset";
+      licenseConfirm.style.background= "unset";
+    }
+    // console.log(event.target);
+  })
 
   // ** Phase 4: Update submit button click count **
 
