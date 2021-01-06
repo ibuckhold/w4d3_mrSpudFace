@@ -7,16 +7,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   // ** Phase 1B: Update license with event delegation and event.target **
   const inputs= document.getElementById("drivers-license-form");
-  const outputs= document.querySelectorAll('drivers-license-card');
-  console.log(outputs)
-  console.log(inputs)
+  const outputs= document.querySelectorAll('.license__info');
+
   inputs.addEventListener('input', (event) => {
     outputs.forEach(output => {
       if (output.id.includes(event.target.id)) {
         output.innerText= event.target.value;
       }
-      console.log(output)
-      console.log(input)
     })
   })
 
