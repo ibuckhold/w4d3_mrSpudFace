@@ -43,5 +43,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   // ** Phase 4: Update submit button click count **
 
-
+  const button = document.querySelector('button');
+  //const button = document.getElementsByClassName('form__submit')[0];
+  let count = 0;
+  console.log(button.innerText);
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    count++;
+    button.innerText = `Submit ${count}`;
+  })
 });
